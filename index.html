@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bakery</title>
+</head>
+<body>
+    <div class="section-1">
+        <div class="nav">
+            <img src="./img/logo.svg" alt="logo" class="logo">
+            <div class="nav__links">
+                <div class="link">Home</div>
+                <div class="link">About</div>
+                <div class="link">Store</div>
+            </div>
+            <div class="nav__details">
+                <div class="details__num">+ 123 456 789
+                </div>
+                <div class="details__cart">2 Items-$20.50</div>
+            </div>
+        </div>
+        <div class="main">
+            <h1 class="main__heading">
+                Welcome To <span class="primary-heading-sub">Grandma's</span> 
+            </h1>
+            <button class="main__btn btn">Explore</button>
+        </div>
+    </div>
+    <div class="section-2">
+        <div class="section-2__container">
+            <div class="details">
+                <h2 class="details__heading">
+                    About <span class="primary-heading-sub">Us</span> 
+                </h2>
+                <div class="details__para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!
+                </div>
+                <button class=" btn">Explore</button>
+            </div>
+            <div class="details__img__container">
+                <img src="./img/sweets-1.jpeg" alt="Sweets pic" class="details__img">
+            </div>
+        </div>
+    </div>
+    <div class="section-3">
+        <h1 class="primary-heading">Our <span class="primary-heading-sub">Store</span></h1>
+        <div class="buttons">
+            <button class="btn btn-all" data-filter="all">All</button>
+            <button class="btn btn-cakes" data-filter="cakes">Cakes</button>
+            <button class="btn btn-cupcakes" data-filter="cupcakes">Cupcakes</button>
+            <button class="btn btn-sweets" data-filter="sweets">Sweets</button>
+            <button class="btn btn-doughnuts" data-filter="doughnuts">Doughnuts</button>
+        </div>
+        <div class="search-bar__container">
+            <input id="search" class="search-bar" type="search" placeholder="item..." onkeyup="getValue()">
+        </div>
+
+        <div class="modal">
+            <div class="modal-content">
+                <img class="modal__arrow modal-left" src="./img/chevron-left (1).svg" alt="">
+                <img class="modal__cross" src="./img/x.svg" alt="">
+                <img class="modal__img" src='./img/cake-1.jpeg'></img>
+                <img class="modal__arrow modal-right" src="./img/chevron-right (1).svg" alt="">
+            </div>
+        </div>
+        <div class="items">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
