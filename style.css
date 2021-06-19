@@ -24,6 +24,10 @@ img{
     width: 100%;
 }
 
+button{
+    border: none;
+}
+
 .section-2__container,
 .section-3{
     width: 80%;
@@ -35,6 +39,7 @@ img{
 }
 
 .section-1{
+    position: relative;
     height: 100vh;
 }
 
@@ -54,8 +59,13 @@ img{
     align-items: center;
 }
 
+.nav__links{
+    margin-left:auto;
+    margin-right: auto;
+}
+
 .nav__details{
-    margin-right: 5rem;
+    margin-left: auto;
 }
 
 .logo{
@@ -76,12 +86,20 @@ img{
     border: 2px solid #000;
     border-radius: .5rem;
     transition: all .2s;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #fff;
 }
 
 .details__cart:hover{
     background-color:  rgb(241, 103, 179);
     color: #fff;
     border:2px solid rgb(241, 103, 179);
+    cursor: pointer;
+}
+
+.details__cart:active{
+    background-color: #000;
 }
 
 .link{
@@ -92,6 +110,43 @@ img{
 
 .link:hover{
     color: rgb(0, 0, 0);
+}
+
+.cart{
+    position: absolute;
+    top:10vh;
+    right:0%;
+    width: 20vw;
+    opacity:0;
+    visibility:hidden;
+    transition: all .8s; 
+    background: rgb(243, 247, 190);
+    padding: 1rem 0;
+}
+
+.cart--open{
+    opacity:1;
+    visibility:visible;
+ } 
+
+.cart__item{
+    display: flex;
+    justify-content: space-around;
+    margin: .5rem 0;
+}
+
+.cart__item:not(:first-child){
+    margin: 1rem 0;
+}
+
+.cart__item__img{
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+} 
+
+.cart__item--details{
+    font-size: 1.5rem;
 }
 
 .main{
@@ -274,14 +329,21 @@ img{
 
 .item-img__container{
     overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.item-img__container:hover .item__img{
+    transform: scale(1.2);
+}
+
+.item-img__container:hover .item__icon__container{
+    transform: translate(0,0);
+    opacity: 1;
 }
 
 .item__img{
     transition: all .8s;
-}
-
-.item__img:hover{
-    transform: scale(1.2);
 }
 
 .search-bar__container{
@@ -296,4 +358,32 @@ img{
     border: none;
     font-family: 'Courgette', cursive;
     font-size: 1.7rem;
+}
+
+.item__icon__container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem ; 
+    background-color: rgb(248, 247, 165);  
+    overflow: hidden;
+    transform: translate(100%,100%);
+    transition: all .8s;
+    border: none;
+    cursor: pointer;
+}
+
+.item__icon__container:active{
+    transform: translate(0,-1px);
+    background-color: #000;  
+}
+
+.item__icon__container:active .cart__icon{
+    fill: rgb(255, 255, 255);
+}
+
+.cart__icon{
+    height: 2rem;
+    width: 2rem;
+    fill: rgb(0, 0, 0);  
 }
